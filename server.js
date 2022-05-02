@@ -1,3 +1,14 @@
+const fs = require('fs')
+const morgan = require('morgan')
+const db = require('./database.js')
+
+var express = require("express")
+const app = express()
+const args = minimist(process.argv.slice(2))
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
 const help = (`
 server.js [options]
 --port, -p	Set the port number for the server to listen on. Must be an integer
@@ -16,17 +27,6 @@ if (args.help || args.h) {
     console.log(help)
     process.exit(0)
 }
-
-const fs = require('fs')
-const morgan = require('morgan')
-const db = require('./database.js')
-
-var express = require("express")
-const app = express()
-const args = minimist(process.argv.slice(2))
-
-app.use(express.urlencoded({extended:true}));
-app.use(express.json());
 
 args["port"]
 const HTTP_PORT = args.port || 5000
