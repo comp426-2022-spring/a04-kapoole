@@ -65,17 +65,17 @@ app.use( (req,res,next) => {
     next()
 })
 
-// if (args.debug){
-//     app.get('/app/log/access', (req,res) => {
-//         const stmt = db.prepare('SELECT * FROM accesslog').all()
-//         res.statusCode = 200
-//         res.json(stmt)
-//     })
+if (args.debug){
+    app.get('/app/log/access', (req,res) => {
+        const stmt = db.prepare('SELECT * FROM accesslog').all()
+        res.statusCode = 200
+        res.json(stmt)
+    })
     
-//     app.get('/app/error', (req,res) => {
-//         throw new error ('Error test successful')
-//     })
-// }
+    app.get('/app/error', (req,res) => {
+        throw new error ('Error test successful')
+    })
+}
 
 
 app.get('/app/', (req, res) => {
