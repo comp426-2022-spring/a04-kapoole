@@ -1,6 +1,3 @@
-import express from 'express'
-import minimist from 'minimist'
-
 const help = (`
 server.js [options]
 --port, -p	Set the port number for the server to listen on. Must be an integer
