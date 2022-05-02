@@ -38,7 +38,9 @@ const server = app.listen(HTTP_PORT, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%', HTTP_PORT))
 })
 
-if (args.log){
+if (args.log == 'false') {
+    console.log("NOTICE: not creating file access.log")
+} else {
     const WRITESTREAM = fs.createWriteStream('access.log', {flags: 'a'})
     app.use(morgan('accesslog', {stream: WRITESTREAM }))
 }
