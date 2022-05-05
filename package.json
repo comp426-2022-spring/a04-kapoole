@@ -1,0 +1,25 @@
+{
+  "name": "a04-kapoole",
+  "version": "1.0.0",
+  "description": "Working with a database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-spring/a04-kapoole.git"
+  },
+  "author": "Kenan",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a04-kapoole/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a04-kapoole#readme",
+  "dependencies": {
+    "better-sqlite3": "^7.5.1",
+    "express": "^4.18.1",
+    "minimist": "^1.2.6",
+    "morgan": "^1.10.0"
+  }
+}
